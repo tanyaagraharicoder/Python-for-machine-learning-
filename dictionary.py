@@ -68,6 +68,21 @@
 # if else in one line 
 # print("a") if(a>b) else print("b")  
 
+# enumerate function in python 
+# l=["shivam","shivanya","ankit"]
+# for index, value in enumerate(l):
+#     print(f"index is {index} and value is {value}")
+#     if(value=="shivam"):
+#         print("found the value shivam  here ",index)
+#         break
+# # print(list(enumerate(l)))
+
+marks=[12, 23, 89, 45, 67, 233,12]
+for index ,marks in enumerate(marks):
+    print(marks)
+    if (index==3):
+        print("found tanya  at index ",index)
+       
 
 
 
