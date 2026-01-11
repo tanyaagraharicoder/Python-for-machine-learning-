@@ -59,12 +59,27 @@
 
 # lamda function -> used when a small function s requiredfor short period of time 
 
-def add(x, y):
-    return x + y
-print(add(2, 3))
-# equivalent lamda function
-sum = lambda x, y: x + y
-print(sum(2, 3))
+# def add(x, y):
+#     return x + y
+# print(add(2, 3))
+# # equivalent lamda function
+# sum = lambda x, y: x + y
+# print(sum(2, 3))
+
+
+
+#  map function -> used to apply a function to all items in an iterable (like list, tuple etc.)
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+
+# filter function -> used to filter items in an iterable based on a condition
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Output: [2, 4]
+
+
+
+
 
 
 
