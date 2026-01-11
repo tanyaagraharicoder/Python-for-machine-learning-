@@ -36,26 +36,37 @@
 # f.close()
 
 # tell method -- returns the current position of the file pointer 
-f = open("sample.txt", "r")
+# f = open("sample.txt", "r")
 
-print(f.tell())      # 0 (start of file)
-f.read(5)
-print(f.tell())      # 5
+# print(f.tell())      # 0 (start of file)
+# f.read(5)
+# print(f.tell())      # 5
 
-f.close()
+# f.close()
 
 
 
-# seek method -- moves the file pointer to a specific position
-f = open("sample.txt", "r")
+# # seek method -- moves the file pointer to a specific position
+# f = open("sample.txt", "r")
 
-f.read(10)
-print(f.tell())   # 10
+# f.read(10)
+# print(f.tell())   # 10
 
-f.seek(0)
-print(f.tell())   # 0
+# f.seek(0)
+# print(f.tell())   # 0
 
-f.close()
+# f.close()
+
+# lamda function -> used when a small function s requiredfor short period of time 
+
+def add(x, y):
+    return x + y
+print(add(2, 3))
+# equivalent lamda function
+sum = lambda x, y: x + y
+print(sum(2, 3))
+
+
 
 
 
