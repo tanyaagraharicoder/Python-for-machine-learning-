@@ -68,14 +68,26 @@
 
 
 
-#  map function -> used to apply a function to all items in an iterable (like list, tuple etc.)
-numbers = [1, 2, 3, 4, 5]
-squared = list(map(lambda x: x**2, numbers))
-print(squared)  # Output: [1, 4, 9, 16, 25]
+# #  map function -> used to apply a function to all items in an iterable (like list, tuple etc.)
+# numbers = [1, 2, 3, 4, 5]
+# squared = list(map(lambda x: x**2, numbers))
+# print(squared)  # Output: [1, 4, 9, 16, 25]
 
-# filter function -> used to filter items in an iterable based on a condition
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
-print(even_numbers)  # Output: [2, 4]
+# # filter function -> used to filter items in an iterable based on a condition
+# even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+# print(even_numbers)  # Output: [2, 4]
+
+
+a= [4,2,45]
+b=[4,2,45]
+
+print(a is b) #compare the exact location of memory
+print(a==b)# compare the value
+
+
+
+
+
 
 
 
