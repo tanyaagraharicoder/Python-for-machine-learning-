@@ -92,31 +92,46 @@
 
 # inheritance in python 
 
+# class Employee:
+#     def __init__(self,name,salary):
+#         self.name=name
+#         self.salary= salary
+
+#     def info(self):
+#         print(f"{self.name} earns {self.salary} per month")
+
+
+# class Developer(Employee):
+#     def __init__(self,name,salary,lang):
+#         super().__init__(name,salary)
+#         self.lang= lang
+
+#     def info(self):
+#         super().info()
+#         print(f"{self.name} works with {self.lang}")
+
+
+# d= Developer("tanya",5000,"python")
+# d.info()
+# e= Employee("harry",7000)
+# e.info()
+
+
+
+#  access moifiers in python
+
 class Employee:
-    def __init__(self,name,salary):
-        self.name=name
-        self.salary= salary
+    def __init__(self):
+        self.name="tanya"      # public
+        self._salary=5000      # protected
+        self.__networth= 10000  # private
 
-    def info(self):
-        print(f"{self.name} earns {self.salary} per month")
+a= Employee()
+print(a.name)          # public access
+print(a._salary)       # protected access (conventionally should be treated as non-public)
 
-
-class Developer(Employee):
-    def __init__(self,name,salary,lang):
-        super().__init__(name,salary)
-        self.lang= lang
-
-    def info(self):
-        super().info()
-        print(f"{self.name} works with {self.lang}")
-
-
-d= Developer("tanya",5000,"python")
-d.info()
-e= Employee("harry",7000)
-e.info()
-
-
+# print(a.__networth)    # private access (will raise AttributeError)
+print(a._Employee__networth)  # accessing private attribute using name mangling
 
 
 
