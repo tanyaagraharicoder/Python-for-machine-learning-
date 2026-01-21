@@ -157,30 +157,68 @@
 
 # instance variable 
 
-class Person:
-    def __init__(self,name,age):
-        self.name=name      # instance variable
-        self.age=age        # instance variable
+# class Person:
+#     def __init__(self,name,age):
+#         self.name=name      # instance variable
+#         self.age=age        # instance variable
 
-p1= Person("tanya",20)
-p2= Person("harry",25)
-print(p1.name, p1.age)  # Output: tanya 20
-print(p2.name, p2.age)  # Output: harry 25
+# p1= Person("tanya",20)
+# p2= Person("harry",25)
+# print(p1.name, p1.age)  # Output: tanya 20
+# print(p2.name, p2.age)  # Output: harry 25
 
 
-#  class variable 
+# #  class variable 
 
-class student:
-    school_name= "ABC High School"   # class variable
+# class student:
+#     school_name= "ABC High School"   # class variable
 
-    def __init__(self,name,grade):
-        self.name=name        # instance variable
-        self.grade=grade      # instance variable
+#     def __init__(self,name,grade):
+#         self.name=name        # instance variable
+#         self.grade=grade      # instance variable
 
-s1= student("tanya","A")
-s2= student("harry","B")
+# s1= student("tanya","A")
+# s2= student("harry","B")
 
-print(s1.name, s1.grade, s1.school_name)  # Output: tanya A ABC High School
+# print(s1.name, s1.grade, s1.school_name)  # Output: tanya A ABC High School
+
+#  class method in python 
+
+
+class Employee:
+
+    company= "Apple"
+
+    def show(self):
+        print(f"Employee works at {self.company}  and name is {self.name}")
+
+        @classmethod
+        def changeComapny(cls,new_company):
+            cls.company= new_company
+
+e1= Employee()
+e1.name= "tanya" 
+
+e1.show()
+
+e1.changeComapny("Google")
+e1.show()
+print(Employee.company)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
