@@ -12,15 +12,36 @@
 # print(a.info()) 
 
 
-class Person:
-    def __init__(self,n,o):
-        print("Hey i m a person")
-        self.name=n
-        self.occ= o
+# class Person:
+#     def __init__(self,n,o):
+#         print("Hey i m a person")
+#         self.name=n
+#         self.occ= o
 
-    def info(self):
-        print(f"{self.name} is a {self.occ}")    
+#     def info(self):
+#         print(f"{self.name} is a {self.occ}")    
         
 
-a=Person( "tanya","dev")
-a.info()
+# a=Person( "tanya","dev")
+# a.info()
+
+# decorators
+
+
+def greet(fx):
+    def mfx():
+        print("Good morning")
+        fx()
+        print("Have a nice day")
+
+    return mfx
+
+
+# @greet
+def hello():
+    print("hello world")
+
+
+# hello()
+
+greet(hello)
