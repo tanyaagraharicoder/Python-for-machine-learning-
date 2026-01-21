@@ -120,18 +120,40 @@
 
 #  access moifiers in python
 
-class Employee:
-    def __init__(self):
-        self.name="tanya"      # public
-        self._salary=5000      # protected
-        self.__networth= 10000  # private
+# class Employee:
+#     def __init__(self):
+#         self.name="tanya"      # public
+#         self._salary=5000      # protected
+#         self.__networth= 10000  # private
 
-a= Employee()
-print(a.name)          # public access
-print(a._salary)       # protected access (conventionally should be treated as non-public)
+# a= Employee()
+# print(a.name)          # public access
+# print(a._salary)       # protected access (conventionally should be treated as non-public)
 
-# print(a.__networth)    # private access (will raise AttributeError)
-print(a._Employee__networth)  # accessing private attribute using name mangling
+# # print(a.__networth)    # private access (will raise AttributeError)
+# print(a._Employee__networth)  # accessing private attribute using name mangling
+
+
+
+# Static method and class method in python
+
+class MathOperations:
+    @staticmethod
+    def add(x, y):
+        return x + y
+
+    @classmethod
+    def multiply(cls, x, y):
+        return x * y
+
+
+# Using static method
+sum_result = MathOperations.add(5, 3)
+print(f"Sum: {sum_result}")
+# Using class method
+product_result = MathOperations.multiply(5, 3)
+print(f"Product: {product_result}")
+
 
 
 
