@@ -137,22 +137,52 @@
 
 # Static method and class method in python
 
-class MathOperations:
-    @staticmethod
-    def add(x, y):
-        return x + y
+# class MathOperations:
+#     @staticmethod
+#     def add(x, y):
+#         return x + y
 
-    @classmethod
-    def multiply(cls, x, y):
-        return x * y
+#     @classmethod
+#     def multiply(cls, x, y):
+#         return x * y
 
 
-# Using static method
-sum_result = MathOperations.add(5, 3)
-print(f"Sum: {sum_result}")
-# Using class method
-product_result = MathOperations.multiply(5, 3)
-print(f"Product: {product_result}")
+# # Using static method
+# sum_result = MathOperations.add(5, 3)
+# print(f"Sum: {sum_result}")
+# # Using class method
+# product_result = MathOperations.multiply(5, 3)
+# print(f"Product: {product_result}")
+
+
+# instance variable 
+
+class Person:
+    def __init__(self,name,age):
+        self.name=name      # instance variable
+        self.age=age        # instance variable
+
+p1= Person("tanya",20)
+p2= Person("harry",25)
+print(p1.name, p1.age)  # Output: tanya 20
+print(p2.name, p2.age)  # Output: harry 25
+
+
+#  class variable 
+
+class student:
+    school_name= "ABC High School"   # class variable
+
+    def __init__(self,name,grade):
+        self.name=name        # instance variable
+        self.grade=grade      # instance variable
+
+s1= student("tanya","A")
+s2= student("harry","B")
+
+print(s1.name, s1.grade, s1.school_name)  # Output: tanya A ABC High School
+
+
 
 
 
