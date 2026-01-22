@@ -82,6 +82,63 @@
 # d.speak()  # Output: Dog barks
 
 
+# multiple inheritance
+
+class Father:
+    def skills(self):
+        print("Gardening, Programming")
+class Mother:
+    def skills(self):
+        print("Cooking, Art")
+class Child(Father, Mother):
+    def skills(self):
+        Father.skills(self)
+        Mother.skills(self)
+        print("Sports, Music")
+
+
+c = Child()
+c.skills()
+
+
+
+#  multilevel inheritance 
+class Grandfather:
+    def heritage(self):
+        print("Land, Jewelry")
+class Father(Grandfather):
+    def skills(self):
+        print("Gardening, Programming")
+class Child(Father):
+    def hobbies(self):
+        print("Sports, Music")
+c = Child()
+c.heritage()  # Output: Land, Jewelry
+
+
+
+#  hybrid and hierarical inheritance 
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+class Cat(Animal):
+    def speak(self):
+        print("Cat meows")
+d = Dog()
+d.speak()  # Output: Dog barks
+
+c = Cat()
+c.speak()  # Output: Cat meows
+
+
+
+
+
+
+
 
 
 
